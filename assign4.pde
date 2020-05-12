@@ -275,8 +275,8 @@ void draw() {
              cabbageX[i] = width + CABBAGE_W;
              playerHealth ++;
            }else{
-					 		image(cabbage, cabbageX[i], cabbageY[i];
-					 }
+             image(cabbage, cabbageX[i], cabbageY[i]);
+           }
          }else{
            image(cabbage, cabbageX[i], cabbageY[i]);
          }
@@ -311,7 +311,6 @@ void draw() {
 				// Check left boundary
 				if(playerCol > 0){
           
-          
           if(playerRow >= 0){
             if(soilHealth[playerCol-1][playerRow] !=0){
               soilHealth[playerCol-1][playerRow] --;
@@ -338,7 +337,7 @@ void draw() {
 
 				// Check right boundary
 				if(playerCol < SOIL_COL_COUNT - 1){
-          
+  
           if(playerRow >= 0){
             if(soilHealth[playerCol+1][playerRow] != 0){
               soilHealth[playerCol+1][playerRow] --;
