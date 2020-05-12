@@ -310,8 +310,13 @@ void draw() {
 				if(playerCol > 0){
           
           
-          if(soilHealth[playerCol-1][playerRow] !=0){
-            soilHealth[playerCol-1][playerRow] --;
+          if(playerRow >= 0){
+            if(soilHealth[playerCol-1][playerRow] !=0){
+              soilHealth[playerCol-1][playerRow] --;
+            }else{
+              playerMoveDirection = LEFT; 
+              playerMoveTimer = playerMoveDuration;
+            }
           }else{
 
   					// HINT:
@@ -319,7 +324,7 @@ void draw() {
   					// > If so, dig it and decrease its health
   					// > Else then start moving (set playerMoveDirection and playerMoveTimer)
   
-  					playerMoveDirection = LEFT;
+  					playerMoveDirection = LEFT; 
   					playerMoveTimer = playerMoveDuration;
           }
 
@@ -332,8 +337,13 @@ void draw() {
 				// Check right boundary
 				if(playerCol < SOIL_COL_COUNT - 1){
           
-          if(soilHealth[playerCol+1][playerRow] != 0){
-            soilHealth[playerCol+1][playerRow] --;
+          if(playerRow >= 0){
+            if(soilHealth[playerCol+1][playerRow] != 0){
+              soilHealth[playerCol+1][playerRow] --;
+            }else{
+              playerMoveDirection = RIGHT;
+              playerMoveTimer = playerMoveDuration;
+            }
           }else{
 
   					// HINT:
