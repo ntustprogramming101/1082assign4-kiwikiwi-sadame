@@ -274,7 +274,9 @@ void draw() {
            if(playerHealth < PLAYER_MAX_HEALTH){
              cabbageX[i] = width + CABBAGE_W;
              playerHealth ++;
-           }
+           }else{
+					 		image(cabbage, cabbageX[i], cabbageY[i];
+					 }
          }else{
            image(cabbage, cabbageX[i], cabbageY[i]);
          }
