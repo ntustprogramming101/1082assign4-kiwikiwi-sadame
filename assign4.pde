@@ -251,7 +251,7 @@ void draw() {
                    
         // stones 2
         if(soilHealth[i][j] > 30 && soilHealth[i][j] <= 33) 
-          image(stones[1][4], i * SOIL_SIZE, j * SOIL_SIZE);
+          image(stones[1][0], i * SOIL_SIZE, j * SOIL_SIZE);
         else if(soilHealth[i][j] > 33 && soilHealth[i][j] <= 36)
           image(stones[1][1], i * SOIL_SIZE, j * SOIL_SIZE);
         else if(soilHealth[i][j] > 36 && soilHealth[i][j] <= 39)
